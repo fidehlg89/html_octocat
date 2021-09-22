@@ -18,7 +18,7 @@
 		integrity="sha512-Cv93isQdFwaKBV+Z4X8kaVBYWHST58Xb/jVOcV9aRsGSArZsgAnFIhMpDoMDcFNoUtday1hdjn0nGp3+KZyyFw=="
 		crossorigin="anonymous" referrerpolicy="no-referrer" />
 	<link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.8.95/css/materialdesignicons.min.css">
-
+	<script src="https://use.fontawesome.com/7bbead044e.js"></script>
 
 	<!-- Custom stylesheet -->
 	<link type="text/css" rel="stylesheet" href="./assets/css/style.css" />
@@ -35,112 +35,128 @@
 					<div class="card shadow p-3 mb-5 bg-body rounded">
 						<div class="card-body p-0">
 							<form>
-								<div class="d-flex">
-									<div class="ms-1">
-										<select class="form-select form-select-sm form-select-primary"
-											style="width: 100px;"">
-													<option selected>One way</option>
-													<option value=" 1">Round trip</option>
-											<option value="2">
-												<a href="#">Multi-city <i class="fa fa-external-link"></i>
-												</a>
-											</option>
-										</select>
-									</div>
-									<div class="ms-1">
-										<select class="form-select form-select-sm form-select-primary"
-											style="width: 185px;">
-											<option selected>1 passenger, Economy</option>
-											<option value="1">Round trip</option>
-											<option value="2">
-												<a href="#">Multi-city <i class="fa fa-external-link"></i>
-												</a>
-											</option>
-										</select>
-									</div>
-									<div class="ms-1">
-										<select class="form-select blue form-select-sm" style="width: 110px;">
-											<option selected>Advanced</option>
-											<option value="1">Round trip</option>
-											<option value="2">
-												<a href="#">Multi-city <i class="fa fa-external-link"></i>
-												</a>
-											</option>
-										</select>
-									</div>
-								</div>
-								<div class="d-flex mt-4">
-									<div class="dropdown rounded">
-										<div id="country" style="display: flex; align-items:center; justify-content: space-between;">
-											<div class="d-flex" style="flex-flow: column wrap;">
-												<strong for="">From</strong>
-												<span id="selected-country">Miami</span>
-											</div>
-											<span class="mdi mdi-chevron-down"></span>
+								<div class="d-flex p-1" style="flex-wrap: wrap;">
+									<div class="ms-2">
+										<div class="dropdown">
+											<button class="btn btn-default btn-md" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+											  <span id="select-2" class="selected">One way</span>
+											  <span class="mdi mdi-chevron-down"></span>
+											</button>
+											<ul class="dropdown-menu mt-1">
+											  	<li key="1">One way</li>
+											  	<li key="2">Round trip</li>
+												<li key="2"><a class="p-2" href="#" >Multi-city<i class="fa fa-external-link" style="text-decoration: none; margin: 5px;" aria-hidden="true"></i></a>
+												</li>											  	
+											</ul>
 										</div>
 									</div>
-
+									<div class="ms-2">
+										<div class="dropdown">
+											<button class="btn btn-default btn-md" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+											  <span id="select-2" class="selected" >1 passenger, Economy</span>											  
+											  <span class="mdi mdi-chevron-down"></span>
+											</button>
+											<ul class="dropdown-menu mt-1">
+											  	<div><label>Travel class</label></div>
+											  	<select class="p-4">
+													<option class="selected">Economy</option>
+											  	</select>
+											  	<hr/>
+											  	<div style="text-transform: uppercase;"><label>Passangers</label></div>
+												  <li class="d-flex" style="align-items: center; justify-content: space-between;">
+												  		<div class="d-flex" style="flex-direction: column;">
+															<label for="">Adult(s)(16+)</label>
+															<span>12 years and above</span>
+														</div>
+												  		<div class="" style="border: 1px solid;">	
+													  		<button class="adults-decrement">-</button>
+													  		<span class="adults-value">2</span>
+													  		<button class="adults-increment">+</button>
+														  </div>
+												</li>
+												<li class="d-flex" style="align-items: center; justify-content: space-between;">													
+														<div class="d-flex" style="flex-direction: column;">
+														  <label for="">Youth (12-15)</label>
+														  <span>2-11 years at time of travel</span>
+													  </div>
+														<div class="" style="border: 1px solid;">	
+															<button class="youth-decrement">-</button>
+															<span class="youth-value">0</span>
+															<button class="youth-increment">+</button>
+														</div>
+													
+											 	</li>
+												 <li class="d-flex" style="align-items: center; justify-content: space-between;">													
+													<div class="d-flex" style="flex-direction: column;">
+													  <label for="">Children (2-11)</label>
+													  <span>0-23 months at time of travel</span>
+												  </div>
+													<div class="" style="border: 1px solid;">	
+														<button class="children-decrement">-</button>
+														<span class="children-value">0</span>
+														<button class="children-increment">+</button>
+													</div>												
+											 	</li>
+												<hr/>
+												<button class="btn btn-ms" style="text-transform: uppercase;">done</button>
+											</ul>
+										</div>
+									</div>
+									<div class="ms-2">
+										<div class="dropdown">
+											<button class="btn btn-default btn-md" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+											  <span id="select-3" class="selected">Advanced</span>
+											  <span class="mdi mdi-chevron-down"></span>
+											</button>
+											<ul class="dropdown-menu">
+											  	<li>
+													<div>
+														<label>Promo code</label>
+														<div class="form-group" style="width: 220px;">
+															<input class="form-control" type="text" placeholder="Type your code">
+															<div class="dropdown-icon"><span class="mdi mdi-chevron-down"></span></div>
+														</div>
+													</div>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="d-flex mt-4" style="flex-wrap: wrap; justify-content: space-between;">
+											<div class="form-group ms-2" style="width: 330px;">
+												<span class="form-label">From</span>
+												<input class="form-control" type="text" value="Miami (MIA)">
+												<div class="dropdown-icon"><span class="mdi mdi-chevron-down"></span></div>
+											</div>
+											<div class="form-group ms-2" style="width: 330px;">
+												<span class="form-label">To</span>
+												<input class="form-control" type="text" placeholder="Type city or airport code">
+												<div class="dropdown-icon"><span class="mdi mdi-chevron-down"></span></div>
+											</div> 
+											<div class="form-group ms-2" style="width: 200px;">
+												<span class="form-label">Departure</span>
+												<input class="form-control" type="date" required>
+												<div class="departure-date"><span class="mdi mdi-calendar-today"></span></div>
+											</div>
+											<div class="form-group ms-2" style="width: 200px;">
+												<span class="form-label">Return</span>
+												<input class="form-control" required disabled>
+												<div class="return-date"><span class="mdi mdi-calendar-today"></span></div>
+											</div>
+										
+										<div  class="form-group ms-2">
+											<button class="btn btn-primary block btn-lg p-4">FIND FLIGHTS</span>
+										</div>
 								</div>
 							</form>
+							<div class="text-black-50" style="font-size: 13px;">
+								<p>Disclaimer text and <a href="#">link</a></p>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-	<div class="booking-form">
-		<form>
-			<div class="row no-margin">
-				<div class="col-md-3">
-					<div class="form-header">
-						<h2>Book Now</h2>
-					</div>
-				</div>
-				<div class="col-md-7">
-					<div class="row no-margin">
-						<div class="col-md-4">
-							<div class="form-group">
-								<span class="form-label">Check In</span>
-								<input class="form-control" type="date">
-							</div>
-						</div>
-						<div class="col-md-4">
-							<div class="form-group">
-								<span class="form-label">Check out</span>
-								<input class="form-control" type="date">
-							</div>
-						</div>
-						<div class="col-md-2">
-							<div class="form-group">
-								<span class="form-label">Guests</span>
-								<select class="form-control">
-									<option>1</option>
-									<option>2</option>
-									<option>3</option>
-								</select>
-								<span class="select-arrow"></span>
-							</div>
-						</div>
-						<div class="col-md-2">
-							<div class="form-group">
-								<span class="form-label">Kids</span>
-								<select class="form-control">
-									<option>0</option>
-									<option>1</option>
-									<option>2</option>
-								</select>
-								<span class="select-arrow"></span>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-2">
-					<div class="form-btn">
-						<button class="submit-btn">Check availability</button>
-					</div>
-				</div>
-			</div>
-		</form>
 	</div>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
