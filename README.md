@@ -1,2 +1,2 @@
 # octocat
-html, css, jquery booking mockup
+html, css, jquery booking flight mockup
