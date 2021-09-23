@@ -49,7 +49,7 @@
     padding: 0px 15px;
     padding-top: 0px;
     padding-top: 24px;
-    color: #191a1e;
+    color: #575961;
     border: 2px solid #dfe5e9;
     font-size: 1rem;
     font-weight: 600;
@@ -91,6 +91,15 @@
 
 #booking .dropdown-menu li {
     padding: 15px;
+}
+
+#booking .dropdown-menu label {
+    margin-bottom: 5px;
+}
+
+#booking .dropdown-menu .text-desc {
+    font-size: 14px;
+    color: gray;
 }
 
 #booking .dropdown-menu li:hover {
@@ -157,20 +166,6 @@
     font-weight: 500;
 }
 
-#booking .btn-counter button {
-    border: none;
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin-top: -8px;
-}
-
-#booking .dropdown-menu .btn-counter {
-    border: 1px solid;
-    padding: 5px;
-    border-radius: 5px;
-    border-color: #c1b2b2 !important;
-}
-
 #booking hr {
     color: gray;
     margin: 0;
@@ -196,3 +191,79 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     font-size: 1.2rem;
 }
 
+.quantity {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: 1px solid;
+    padding: 12px;
+    border-radius: 5px;
+    border-color: #c1b2b2 !important;
+  }
+  .quantity__minus,
+  .quantity__plus {
+    display: block;
+    width: 22px;
+    height: 23px;
+    margin: 0;
+    text-decoration: none;
+    text-align: center;
+    line-height: 23px;
+  }
+  .quantity__minus {
+    border: none;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-top: -4px;
+    border-radius: 3px 0 0 3px;
+  }
+  .quantity__plus {
+    border: none;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-top: -4px;
+    border-radius: 0 3px 3px 0;
+  }
+  .quantity__input {
+    width: 32px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    border: none;
+    background: transparent;
+  }
+  .quantity__input {
+    width: 32px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    border: none;
+    background: transparent;
+  }
+  .quantity__input input:focus {
+    border: none;
+  }
+  .quantity__input input:active {
+    border: none;
+  }
+
+@media (max-width: 1366px) {
+    #booking .form-from, .form-to{
+        width: 295px;
+    }
+
+    #booking .form-departure, .form-return{
+        width: 160px;
+    }
+}
+
+@media (min-width: 1367px) {
+    #booking .form-from, .form-to{
+        width: 320px;
+    }
+
+    #booking .form-departure, .form-return{
+        width: 180px;
+    }
+}

@@ -37,15 +37,15 @@
 								<div class="d-flex p-1" style="flex-wrap: wrap;">
 									<div class="ms-2">
 										<div class="dropdown">
-											<button id="btn-select-1" class="btn btn-default btn-md" type="button"
+											<button id="btn-select-1" class="btn btn-default btn-sm" type="button"
 												data-bs-toggle="dropdown" aria-expanded="false">
-												<span id="select-2" class="selected">One way</span>
+												<span class="selected">One way</span>
 												<span class="mdi mdi-chevron-down"></span>
 											</button>
 											<ul id="dropdown-menu-1" class="dropdown-menu shadow mt-1">
-												<li key="1">One way</li>
-												<li key="2">Round trip</li>
-												<li key="2"><a href="#">Multi-city<i class="fa fa-external-link"
+												<li id="1">One way</li>
+												<li id="2">Round trip</li>
+												<li id="3"><a href="#">Multi-city<i class="fa fa-external-link"
 															style="text-decoration: none; margin: 5px;"
 															aria-hidden="true"></i></a>
 												</li>
@@ -54,7 +54,7 @@
 									</div>
 									<div class="ms-2">
 										<div class="dropdown">
-											<button id="btn-select-2" class="btn btn-default btn-md" type="button"
+											<button id="btn-select-2" class="btn btn-default btn-sm" type="button"
 												data-bs-toggle="dropdown" aria-expanded="false">
 												<span id="select-2" class="selected">1 passenger, Economy</span>
 												<span class="mdi mdi-chevron-down"></span>
@@ -65,7 +65,7 @@
 														<label>Travel class</label>
 														<div class="form-group">
 															<input class="form-control" type="text"
-																placeholder="Type your code">
+																placeholder="Economy">
 															<div class="dropdown-icon"><span
 																	class="mdi mdi-chevron-down"></span>
 															</div>
@@ -80,53 +80,47 @@
 													style="align-items: center; justify-content: space-between;">
 													<div class="d-flex" style="flex-direction: column;">
 														<label for="">Adult(s)(16+)</label>
-														<span>12 years and above</span>
+														<span class="text-desc">12 years and above</span>
 													</div>
-													<div class="btn-counter" style="border: 1px solid;">
-														<button type="button"
-															class="btn btn-text adults-decrement">-</button>
-														<span class="adults-value">2</span>
-														<button type="button"
-															class="btn btn-text adults-increment">+</button>
+													<div class="quantity">
+														<a id="quantity__minus-adult" href="#" class="quantity__minus"><span>-</span></a>
+														<input id="quantity__input-adult" name="quantity-adult" type="text" class="quantity__input" disabled value="2">
+														<a id="quantity__plus-adult" href="#" class="quantity__plus"><span>+</span></a>
 													</div>
 												</li>
 												<li class="d-flex"
 													style="align-items: center; justify-content: space-between;">
 													<div class="d-flex" style="flex-direction: column;">
 														<label for="">Youth (12-15)</label>
-														<span>2-11 years at time of travel</span>
+														<span class="text-desc">2-11 years at time of travel</span>
 													</div>
-													<div class="btn-counter" style="border: 1px solid;">
-														<button type="button"
-															class="btn btn-text youth-decrement">-</button>
-														<span class="youth-value">0</span>
-														<button type="button"
-															class="btn btn-text youth-increment">+</button>
+													<div class="quantity">
+														<a id="quantity__minus-youth" href="#" class="quantity__minus"><span>-</span></a>
+														<input id="quantity__input-youth" name="quantity" type="text" class="quantity__input" disabled value="0">
+														<a id="quantity__plus-youth" href="#" class="quantity__plus"><span>+</span></a>
 													</div>
 												</li>
 												<li class="d-flex"
 													style="align-items: center; justify-content: space-between;">
 													<div class="d-flex" style="flex-direction: column;">
 														<label for="">Children (2-11)</label>
-														<span>0-23 months at time of travel</span>
+														<span class="text-desc">0-23 months at time of travel</span>
 													</div>
-													<div class="btn-counter" style="border: 1px solid;">
-														<button type="button"
-															class="btn btn-text children-decrement">-</button>
-														<span class="children-value">0</span>
-														<button type="button"
-															class="btn btn-text children-increment">+</button>
+													<div class="quantity">
+														<a id="quantity__minus-childrens" href="#" class="quantity__minus"><span>-</span></a>
+														<input id="quantity__input-childrens" name="quantity" type="text" class="quantity__input" disabled value="0">
+														<a id="quantity__plus-childrens" href="#" class="quantity__plus"><span>+</span></a>
 													</div>
 												</li>
 												<hr />
-												<button id="btn-done-1" class="btn btn-text btn-ms"
+												<button id="btn-done-2"  type="button" class="btn btn-text btn-ms"
 													style="text-transform: uppercase; float: right; margin-right: 5px;">done</button>
 											</ul>
 										</div>
 									</div>
 									<div class="ms-2">
 										<div class="dropdown">
-											<button id="btn-select-3" class="btn btn-default btn-md" type="button"
+											<button id="btn-select-3" class="btn btn-default btn-sm" type="button"
 												data-bs-toggle="dropdown" aria-expanded="false">
 												<span id="select-3" class="selected">Advanced</span>
 												<span class="mdi mdi-chevron-down"></span>
@@ -162,29 +156,29 @@
 													</div>
 												</li>
 												<hr />
-												<button id="btn-done-2" class="btn btn-text btn-ms"
+												<button id="btn-done-3" type="button" class="btn btn-text btn-ms" data-bs-toggle="dropdown" aria-expanded="false"
 													style="text-transform: uppercase; float: right; margin-right: 5px;">done</button>
 											</ul>
 										</div>
 									</div>
 								</div>
 								<div class="d-flex mt-4" style="flex-wrap: wrap; justify-content: space-between;">
-									<div class="form-group ms-2" style="width: 330px;">
+									<div class="form-group form-from ms-2"">
 										<span class="form-label">From</span>
 										<input class="form-control" type="text" value="Miami (MIA)">
 										<div class="dropdown-icon"><span class="mdi mdi-chevron-down"></span></div>
 									</div>
-									<div class="form-group ms-2" style="width: 330px;">
+									<div class="form-group form-to ms-2"">
 										<span class="form-label">To</span>
 										<input class="form-control" type="text" placeholder="Type city or airport code">
 										<div class="dropdown-icon"><span class="mdi mdi-chevron-down"></span></div>
 									</div>
-									<div class="form-group ms-2" style="width: 200px;">
+									<div class="form-group form-departure ms-2">
 										<span class="form-label">Departure</span>
 										<input class="form-control" type="date" required>
 										<div class="departure-date"><span class="mdi mdi-calendar-today"></span></div>
 									</div>
-									<div class="form-group ms-2" style="width: 200px;">
+									<div class="form-group form-return ms-2">
 										<span class="form-label">Return</span>
 										<input class="form-control" required disabled>
 										<div class="return-date"><span class="mdi mdi-calendar-today"></span></div>
